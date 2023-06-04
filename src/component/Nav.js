@@ -32,7 +32,7 @@ function Nav() {
       </nav>
       <nav className="nav2">
         <div>
-          <h2>peggie</h2>
+          <h2>Peggy Adugba</h2>
         </div>
         <div>
           <h2 onClick={handleToggle}>
