@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className="header">
       <div>
-        <h3>PEGGIE EVENT DECORATION</h3>
+        <h3>PEGGIES EVENT DECORATION</h3>
         <h5>
           <i>Keeping Pleasant Memories</i>
         </h5>

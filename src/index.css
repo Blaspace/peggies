@@ -12,17 +12,16 @@
 /* NAV BAR*/
 .nav {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0), black);
-  color: white;
+  color: antiquewhite;
   display: flex;
   justify-content: space-between;
   display: none;
 }
 .nav2 {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0), black);
-  color: white;
+  color: antiquewhite;
   display: flex;
   justify-content: space-between;
-  font-size: larger;
 }
 .nav2 h2 {
   padding: 20px;
@@ -68,7 +67,7 @@
   justify-content: center;
   align-items: center;
   height: 250px;
-  color: white;
+  color: antiquewhite;
   font-size: xx-large;
   font-weight: 100;
   text-align: center;
@@ -96,7 +95,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  color: white;
+  color: antiquewhite;
   justify-content: space-evenly;
   padding: 20px;
 }
@@ -209,7 +208,7 @@
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: multiply;
   text-align: center;
-  color: white;
+  color: antiquewhite;
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
@@ -244,7 +243,7 @@
 }
 
 .third-section h1 {
-  color: white;
+  color: antiquewhite;
   font-size: 50px;
   font-weight: bolder;
   cursor: pointer;
@@ -426,7 +425,7 @@
     display: flex;
     flex-direction: row;
     padding: 40px;
-    color: white;
+    color: antiquewhite;
     justify-content: space-evenly;
   }
   .first-section img {

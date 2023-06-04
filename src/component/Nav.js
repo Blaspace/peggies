@@ -10,7 +10,7 @@ function Nav() {
     <>
       <nav className="nav">
         <div>
-          <h2>peggie</h2>
+          <h2>Peggy Adugba</h2>
         </div>
         <ul>
           <a href="#first">
