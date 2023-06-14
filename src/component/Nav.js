@@ -36,7 +36,13 @@ function Nav() {
         </div>
         <div>
           <h2 onClick={handleToggle}>
-            <b>{!toggle ? <>&#x2630;</> : <>&times;</>}</b>
+            <b>
+              {!toggle ? (
+                <>&#x2630;</>
+              ) : (
+                <p style={{ fontSize: "40px" }}>&times;</p>
+              )}
+            </b>
           </h2>
         </div>
         {toggle && (

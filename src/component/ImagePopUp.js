@@ -6,7 +6,9 @@ function ImagePopUp(props) {
       {props.image && (
         <div className="pop-image">
           <h1 onClick={() => props.setImage(null)}>&times;</h1>
-          <img src={props.image} alt="img" />
+          <div>
+            <img src={props.image} alt="img" />
+          </div>
         </div>
       )}
     </>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import img1 from "../public/image-6.jpg";
 import img2 from "../public/image-7.jpg";
 import img3 from "../public/image-8.jpg";
@@ -15,9 +15,7 @@ import img13 from "../public/bg-header.jpg";
 import ImagePopUp from "./ImagePopUp";
 
 function ThirdSection() {
-  const [start, setStart] = useState(0);
   const [gallery, setGallery] = useState(false);
-  const [length, setLength] = useState(start + 4);
   const [image, setImage] = useState(null);
   const images = [
     img1,
@@ -44,12 +42,14 @@ function ThirdSection() {
           <div className="third-section">
             {images.map((value) => {
               return (
-                <img
-                  src={value}
-                  alt="img"
-                  key={value}
-                  onClick={() => handlePop(value)}
-                />
+                <div key={value}>
+                  <img
+                    src={value}
+                    alt="img"
+                    key={value}
+                    onClick={() => handlePop(value)}
+                  />
+                </div>
               );
             })}
           </div>
@@ -60,7 +60,9 @@ function ThirdSection() {
           <div className="gallery">
             {images.map((value) => {
               return (
-                <img src={value} alt="img" onClick={() => handlePop(value)} />
+                <div key={value}>
+                  <img src={value} alt="img" onClick={() => handlePop(value)} />
+                </div>
               );
             })}
           </div>

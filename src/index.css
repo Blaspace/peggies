@@ -60,13 +60,16 @@
   padding: 20px;
   cursor: pointer;
 }
+.nav ul li:hover {
+  font-size: larger;
+}
 
 /* HEADER*/
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 250px;
+  height: 400px;
   color: antiquewhite;
   font-size: xx-large;
   font-weight: 100;
@@ -85,7 +88,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   background-color: gray;
 }
 
@@ -98,6 +100,8 @@
   color: antiquewhite;
   justify-content: space-evenly;
   padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .first-section img {
   width: 100%;
@@ -109,7 +113,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-y: hidden;
   border-top: 4px solid lightgray;
   border-bottom: 4px solid lightgray;
 }
@@ -146,8 +150,11 @@
   width: 100%;
 }
 .card-img {
-  max-height: 350px;
+  max-height: 250px;
   overflow: hidden;
+}
+.card-img img {
+  object-fit: cover;
 }
 .cardA {
   background-color: rgb(37, 37, 37);
@@ -203,17 +210,16 @@
   background-image: url("./public/image-5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: multiply;
   text-align: center;
   color: antiquewhite;
-  padding-top: 10px;
-  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .third-con h2 {
   margin-bottom: 40px;
@@ -223,13 +229,23 @@
   align-items: center;
   width: 95vw;
   overflow-x: scroll;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 20px;
+}
+.third-section div {
+  scroll-snap-align: start;
+  min-width: 75vw;
+  margin-left: 20px;
+  border-radius: 20px;
+  height: 250px;
+  border: 4px solid lightgrey;
+  margin-bottom: 20px;
 }
 .third-section img {
-  min-width: 23vw;
-  margin-left: 10px;
-  height: 130px;
-  border: 1px solid lightgrey;
-  margin-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
 }
 .third-section::-webkit-scrollbar {
   background-color: antiquewhite;
@@ -248,8 +264,8 @@
   font-weight: bolder;
   cursor: pointer;
 }
-.third-section img:hover {
-  border: 4px solid grey;
+.third-section div:hover {
+  border: 6px solid grey;
 }
 .gallery-con button {
   margin-top: 40px;
@@ -265,10 +281,16 @@
   margin-left: 40px;
   margin-right: 40px;
 }
-.gallery img {
-  width: 30%;
+.gallery div {
+  width: 45%;
+  height: 150px;
   margin-top: 40px;
-  border: 1px solid antiquewhite;
+  border: 1px solid lightgrey;
+}
+.gallery img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .pop-image {
   position: absolute;
@@ -283,9 +305,14 @@
   align-items: center;
   z-index: 1;
 }
+.pop-image div {
+  width: 100%;
+  max-height: 65%;
+}
 .pop-image img {
   width: 100%;
-  min-height: 70%;
+  height: 100%;
+  object-fit: cover;
 }
 .pop-image h1 {
   position: absolute;
@@ -306,16 +333,25 @@
   justify-content: space-evenly;
   padding: 20px;
   font-size: large;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .fourth-section div {
   width: 100%;
 }
-.fourth-section img {
-  width: 75%;
+.img-section-four {
+  max-width: 100%;
+  height: 350px;
   border: 4px solid gray;
+}
+.img-section-four img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .fourth-section p {
   margin-top: 10px;
+  max-width: 100%;
 }
 .fourth-section h2 {
   margin-top: 10px;
@@ -332,6 +368,8 @@
   justify-content: center;
   color: antiquewhite;
   font-size: larger;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .form input {
   padding: 10px;
@@ -408,12 +446,14 @@
   .nav {
     display: flex;
   }
-  .pop-image img {
-    width: 80%;
+  .pop-image div {
+    width: 65vw;
+    height: 100vh;
   }
-  .fourth-section img {
+  .pop-image img {
+    object-fit: cover;
+    height: 100%;
     width: 100%;
-    border: 4px solid gray;
   }
   .first-text {
     width: 10%;
@@ -428,18 +468,19 @@
     color: antiquewhite;
     justify-content: space-evenly;
   }
-  .first-section img {
-    width: 100%;
-    border: 4px solid lightgray;
-  }
-  .first-section div {
+  .fourth-section div {
     width: 40%;
   }
-
-  .third-section img {
+  .img-section-four {
+    max-width: 40%;
+    height: 350px;
+    border: 4px solid gray;
+  }
+  .third-section div {
     height: 280px;
-    width: 20%;
+    min-width: 20%;
     margin: 5px;
+    border-radius: 20px;
     margin-left: 20px;
     margin-bottom: 15px;
     border: 4px solid white;
@@ -451,14 +492,14 @@
     margin-left: 40px;
     margin-right: 40px;
   }
-  .gallery img {
+  .gallery div {
     width: 30%;
     height: 250px;
     margin-top: 40px;
-    border: 4px solid antiquewhite;
+    border: 4px solid lightgrey;
   }
   .gallery img:hover {
-    border: 6px solid antiquewhite;
+    border: 6px solid lightgray;
   }
   .gallery-con button {
     margin-top: 40px;
@@ -467,9 +508,6 @@
     font-weight: bolder;
     background-color: antiquewhite;
     font-size: larger;
-  }
-  .pop-image img {
-    max-height: 90%;
   }
 
   /*SECOND SECTION*/
@@ -514,14 +552,6 @@
   .form button {
     width: 70%;
   }
-  .fourth-section div {
-    width: 40%;
-    font-size: larger;
-  }
-  .fourth-section img {
-    width: 100%;
-    border: 4px solid gray;
-  }
   .fourth-section {
     flex-direction: row;
   }
@@ -540,13 +570,6 @@
   }
   .first-section div {
     width: 40%;
-  }
-  .fourth-section div {
-    width: 40%;
-  }
-  .fourth-section img {
-    width: 100%;
-    border: 4px solid gray;
   }
   .first-section h2 {
     margin-top: 50px;
@@ -580,14 +603,14 @@
   .form button {
     width: 70%;
   }
-  .gallery img {
+  .gallery div {
     width: 30%;
     height: 300px;
     margin-top: 40px;
-    border: 4px solid antiquewhite;
+    border: 4px solid lightgrey;
   }
   .gallery img:hover {
-    border: 6px solid antiquewhite;
+    border: 6px solid lightgray;
   }
   .gallery-con button {
     margin-top: 40px;
