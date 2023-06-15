@@ -21,5 +21,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-- This project was inspired by the creativity and innovation of event planning companies around the world.
 - Special thanks to the React community for providing a robust and versatile framework for web development.
